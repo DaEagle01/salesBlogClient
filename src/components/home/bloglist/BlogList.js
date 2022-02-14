@@ -5,11 +5,12 @@ const BlogList = () => {
 
   const [blogs, setBlogs] = useState([])
   useEffect(() => {
-    fetch('http://localhost:5000/blogs')
+    fetch('https://salesblogapi.herokuapp.com/blogs')
       .then(res => res.json())
       .then(data => setBlogs(data))
   }, [])
 
+  console.log(blogs)
   return (
     <div>
       <link
@@ -48,7 +49,7 @@ const BlogList = () => {
 
           <div className="flex flex-wrap -mx-4">
             {blogs.map(blog => {
-              return <div className="w-full md:w-1/2 lg:w-1/3 px-4">
+              return <div className="w-full md:w-1/2 lg:w-1/3 px-4" key={blog?._id}>
                 <div className="max-w-[370px] mx-auto mb-10">
                   <div className="rounded overflow-hidden mb-8">
                     <img

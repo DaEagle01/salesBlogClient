@@ -8,12 +8,12 @@ const FullBlog = () => {
 
     const [blogs, setblogs] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/blogs/${id}`)
+        fetch(`https://salesblogapi.herokuapp.com/blogs/${id}`)
             .then(res => res.json())
             .then(data => setblogs(data))
-    }, [])
+    }, )
 
-    const { _id, mainblog, title, coverimage } = blogs;
+    const {  mainblog, title, coverimage } = blogs;
 
     return (
         <>

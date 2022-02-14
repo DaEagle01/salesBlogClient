@@ -6,8 +6,8 @@ const CreateBlog = () => {
     register,
     handleSubmit,
     reset,
-    setError,
-    formState: { errors },
+    
+   
   } = useForm();
 
   const onSubmit = (data) => {
@@ -15,7 +15,7 @@ const CreateBlog = () => {
     let now = new Date()
     data.date = now.toDateString();
     console.log(data)
-    fetch("http://localhost:5000/blogs", {
+    fetch("https://salesblogapi.herokuapp.com/blogs", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
