@@ -6,18 +6,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  //   const { user } = useAuth();
-  //   console.log(user);
-  //   const auth = getAuth();
-  //   const handleLogOut = () => {
-  //     if (window.confirm("Are you sure you want to logout?")) {
-  //       signOut(auth)
-  //         .then("sign out successfully!", console.log("loggedout successfully"))
-  //         .catch((error) => {
-  //           console.log(error.message);
-  //         });
-  //     }
-  //   };
+
 
   return (
     <div>
@@ -41,34 +30,17 @@ const Header = () => {
                   <div>
                     <Link
                       to="/"
-                      className="text-gray-800 hover:bg-gray-200 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
+                      className="text-gray-800 hover:bg-gray-200 hover: text-gray-800 px-3 py-2 rounded-md text-xl font-bold"
                     >
                       Home
                     </Link>
 
                     <Link
                       to="/createblog"
-                      className="text-gray-800 hover:bg-gray-200 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
+                      className="text-gray-800 hover:bg-gray-200 hover: text-gray-800 px-3 py-2 rounded-md text-xl font-bold"
                     >
                       Create blog
                     </Link>
-
-                    {/* {user?.email || user?.name ? (
-                    <Link
-                      to="/"
-                      onClick={handleLogOut}
-                      className="text-gray-300 hover:bg-gray-500 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
-                    >
-                      Logout
-                    </Link>
-                    ) : (
-                    <Link
-                      to="/login"
-                      className="text-gray-300 hover:bg-gray-500 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
-                    >
-                      Login
-                    </Link>
-                    )} */}
                   </div>
                 </div>
               </div>
@@ -135,35 +107,14 @@ const Header = () => {
                 ref={ref}
                 className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center"
               >
-                {/* <Link
-                  to="/userinfo"
-                  className="text-gray-300 hover:bg-gray-500 hover: text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  User Info
-                </Link> */}
+
                 <Link
                   to="/createblog"
-                  className="text-gray-800 hover:bg-gray-200 hover: text-gray-800 block px-3 py-2 rounded-md text-base font-medium"
-                  
+                  className="text-gray-800 hover:bg-gray-200 hover: text-gray-800 block px-3 py-2 rounded-md text-xl font-medium"
+
                 >
                   Create blog
                 </Link>
-                {/* {user?.email || user?.name ? (
-                  <Link
-                    to="/"
-                    onClick={handleLogOut}
-                    className="text-gray-300 hover:bg-gray-500 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Logout
-                  </Link>
-                ) : (
-                  <Link
-                    to="/login"
-                    className="text-gray-300 hover:bg-gray-500 hover: text-gray-800 px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Login
-                  </Link>
-                )} */}
               </div>
             </div>
           )}
